@@ -1,6 +1,5 @@
 package com.mehmetpekdemir.generic.controller;
 
-import com.mehmetpekdemir.generic.common.annotation.ApiController;
 import com.mehmetpekdemir.generic.dto.request.UserCreateRequest;
 import com.mehmetpekdemir.generic.dto.request.UserUpdateRequest;
 import com.mehmetpekdemir.generic.dto.response.UserResponse;
@@ -10,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
  * @author MEHMET PEKDEMIR
  * @since 1.0
  */
-@ApiController
+@RestController
 @RequestMapping("/api/v1/user")
 @RequiredArgsConstructor
 public class UserController implements GenericController<UserResponse, UserCreateRequest, UserUpdateRequest> {
